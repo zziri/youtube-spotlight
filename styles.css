@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  flex-direction: column; /* 수직 정렬을 위해 추가 */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #212121; /* 배경색 변경 */
+  margin: 0;
+  color: #f0f0f0; /* 기본 텍스트 색상 */
+}
+
+.logo {
+  font-size: 43px;        /* 로고 크기 (20% 증가) */
+  font-weight: bold;      /* 굵은 글씨 */
+  color: #f0f0f0;         /* 로고 색상 */
+  margin-bottom: 30px;    /* 검색창과 간격 (30px로 증가) */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 살짝 그림자 효과 */
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #303030; /* 검색창 배경색 변경 */
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 5px 15px;
+  width: 500px;
+  transition: box-shadow 0.3s;
+}
+
+.search-box:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.search-icon {
+  color: #bbb; /* 검색 아이콘 색상 */
+  margin-right: 10px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  background-color: transparent; /* 배경 투명 (검색창의 배경과 일치) */
+  color: #f0f0f0; /* 입력 텍스트 색상 */
+}
+
+.search-input::placeholder {
+  color: #888; /* 플레이스홀더 색상 */
+}
+
+/* 자동완성 배경색 제거 */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #303030 inset !important;
+  -webkit-text-fill-color: #f0f0f0 !important;
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #303030 inset !important;
+  -webkit-text-fill-color: #f0f0f0 !important;
+}
